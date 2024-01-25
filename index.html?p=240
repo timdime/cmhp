@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v21.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Rent a Two Bedroom, One Bath Mobile Home - Chief Mobile Home Park</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C500%2C600%2C700%7CPoppins%3A400%2C500%2C600%2C700&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C500%2C600%2C700%7CPoppins%3A400%2C500%2C600%2C700&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C500%2C600%2C700%7CPoppins%3A400%2C500%2C600%2C700&#038;display=swap" /></noscript>
+	<link rel="canonical" href="index.html?p=240" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Rent a Two Bedroom, One Bath Mobile Home - Chief Mobile Home Park" />
+	<meta property="og:description" content="Rent a two bedroom, one bath manufactured home at Chief Mobile Home Park in Justice, IL. This home features  appliances (refrigerator and stove) and available space for washer and dryer. DETAILS Square Feet: 728 Home Size: 14&#215;52 Monthly Rent: $1,400 (Rent includes land fee, water, sewer and trash.) If you sign a 14 month lease... Read More &#155;" />
+	<meta property="og:url" content="https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/" />
+	<meta property="og:site_name" content="Chief Mobile Home Park" />
+	<meta property="article:modified_time" content="2023-09-06T16:32:26+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/","url":"https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/","name":"Rent a Two Bedroom, One Bath Mobile Home - Chief Mobile Home Park","isPartOf":{"@id":"https://www.chiefmobilehomepark.com/#website"},"datePublished":"2015-07-20T19:17:31+00:00","dateModified":"2023-09-06T16:32:26+00:00","breadcrumb":{"@id":"https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/"]}]},{"@type":"BreadcrumbList","@id":"https://www.chiefmobilehomepark.com/mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.chiefmobilehomepark.com/"},{"@type":"ListItem","position":2,"name":"Mobile Homes for Rent","item":"https://www.chiefmobilehomepark.com/mobile-homes-for-rent/"},{"@type":"ListItem","position":3,"name":"Rent a Two Bedroom, One Bath Mobile Home"}]},{"@type":"WebSite","@id":"https://www.chiefmobilehomepark.com/#website","url":"https://www.chiefmobilehomepark.com/","name":"Chief Mobile Home Park","description":"A mobile home community in Justice, Illinois","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.chiefmobilehomepark.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Chief Mobile Home Park &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Chief Mobile Home Park &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Chief Mobile Home Park &raquo; Rent a Two Bedroom, One Bath Mobile Home Comments Feed" href="mobile-homes-for-rent/rent-a-two-bedroom-one-bath-mobile-home/feed/index.html" />
+<link data-minify="1" rel='stylesheet' id='hans-css' href='wp-content/cache/min/1/wp-content/themes/hans/style.css?ver=1696529146' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=6.4.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<link data-minify="1" rel='stylesheet' id='colorbox-css' href='wp-content/cache/min/1/wp-content/plugins/slideshow-gallery/views/default/css/colorbox.css?ver=1696529146' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='fontawesome-css' href='wp-content/cache/min/1/wp-content/plugins/slideshow-gallery/views/default/css/fontawesome.css?ver=1696529146' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://www.chiefmobilehomepark.com/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3" id="html5shiv-js"></script>
+<![endif]-->
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/plugins/slideshow-gallery/views/default/js/gallery.js?ver=1696529146" id="slideshow-gallery-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/plugins/slideshow-gallery/views/default/js/colorbox.js?ver=1696529146" id="colorbox-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/plugins/slideshow-gallery/views/default/js/jquery-ui.js?ver=1696529146" id="jquery-ui-effects-js" defer></script>
+<link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/240" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd" />
+<link rel='shortlink' href='index.html?p=240' />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed?url=https:%252F%252Fwww.chiefmobilehomepark.com%252Fmobile-homes-for-rent%252Frent-a-two-bedroom-one-bath-mobile-home%252F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed?url=https:%252F%252Fwww.chiefmobilehomepark.com%252Fmobile-homes-for-rent%252Frent-a-two-bedroom-one-bath-mobile-home%252F&amp;format=xml" />
+<style id="mystickymenu" type="text/css">#mysticky-nav { width:100%; position: static; }#mysticky-nav.wrapfixed { position:fixed; left: 0px; margin-top:0px;  z-index: 99990; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; filter: alpha(opacity=90); opacity:0.9; background-color: #f7f5e7;}#mysticky-nav.wrapfixed .myfixed{ background-color: #f7f5e7; position: relative;top: auto;left: auto;right: auto;}#mysticky-nav .myfixed { margin:0 auto; float:none; border:0px; background:none; max-width:100%; }</style>			<style type="text/css">
+																															</style>
+			<link rel="pingback" href="https://www.chiefmobilehomepark.com/xmlrpc.php" />
+<meta name="msvalidate.01" content="53C003ED4F07D99437B1981B17D50107" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+(function(a,e,c,f,g,h,b,d){var k={ak:"941764575",cl:"5q4sCMK26m0Q39-IwQM",autoreplace:"708-458-2033"};a[c]=a[c]||function(){(a[c].q=a[c].q||[]).push(arguments)};a[g]||(a[g]=k.ak);b=e.createElement(h);b.async=1;b.src="//www.gstatic.com/wcm/loader.js";d=e.getElementsByTagName(h)[0];d.parentNode.insertBefore(b,d);a[f]=function(b,d,e){a[c](2,b,k,d,null,new Date,e)};a[f]()})(window,document,"_googWcmImpl","_googWcmGet","_googWcmAk","script");
+</script>
+<meta name="google-site-verification" content="BnuvsRZvmsrUP29O4_olfEaJH9swxOkhpwq2hG1WKV4" /><link rel="icon" href="wp-content/uploads/2018/09/cropped-C-Logo-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/2018/09/cropped-C-Logo-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/2018/09/cropped-C-Logo-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.chiefmobilehomepark.com/wp-content/uploads/2018/09/cropped-C-Logo-270x270.jpg" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body class="page-template-default page page-id-240 page-child parent-pageid-34 header-image content-sidebar hans-blue-gray"><div id="wrap"><div id="header"><div class="wrap"><div id="title-area"><p id="title"><a href="author/cmhp/index.html">Chief Mobile Home Park</a></p><p id="description">A mobile home community in Justice, Illinois</p></div><div class="widget-area header-widget-area"><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><h2 style="text-align: center;">A Mobile Home Community in Justice, IL</h2></div></div></div>
+<div class="header-contact widget"><div class="phone"><h3>CALL US TODAY 708-458-2033</h3></div><div class="email-top"><a href="index.html?p=43">Email Link</a></div></div><!-- end .widget --></div></div></div><div id="nav"><div class="wrap"><ul id="menu-home" class="menu genesis-nav-menu menu-primary"><li id="home-link"><a class="home-button" href="author/cmhp/index.html">Home</a></li><li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-31"><a href="index.html?p=8">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="index.html?p=41">News &#038; Events</a></li>
+</ul>
+</li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40"><a href="index.html?p=32">Homes for Sale</a>
+<ul class="sub-menu">
+	<li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="index.html?p=85">1 Bedroom &#8211; 560 sq ft</a></li>
+	<li id="menu-item-535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-535"><a href="index.html?p=149">2 Bedroom &#8211; 724 sq ft</a></li>
+	<li id="menu-item-495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="index.html?p=134">2 Bedroom &#8211; 784 sq ft</a></li>
+</ul>
+</li>
+<li id="menu-item-592" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-592"><a href="index.html?p=34">Homes for Rent</a>
+<ul class="sub-menu">
+	<li id="menu-item-595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-595"><a href="index.html?p=235">1 Bedroom &#8211; 560 sq ft</a></li>
+	<li id="menu-item-598" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-240 current_page_item menu-item-598"><a href="index.html?p=240" aria-current="page">2 Bedroom &#8211; 728 sq ft</a></li>
+	<li id="menu-item-594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-594"><a href="index.html?p=237">2 Bedroom &#8211; 784 sq ft</a></li>
+</ul>
+</li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="index.html?p=36">Testimonials</a></li>
+<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54"><a href="index.html?p=52">Photos</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45"><a href="index.html?p=43">Contact Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="index.html?p=176">Map</a></li>
+</ul>
+</li>
+</ul></div></div><div id="inner"><div class="wrap"><div id="content-sidebar-wrap"><div id="content" class="hfeed"><div class="post-240 page type-page status-publish hentry entry"><h1 class="entry-title">Rent a Two Bedroom, One Bath Mobile Home</h1>
+<div class="entry-content"><p><div class="soliloquy-outer-container" data-soliloquy-loaded="0"><div aria-live="polite" id="soliloquy-container-209" class="soliloquy-container soliloquy-transition-fade soliloquy-fade soliloquy-controls-active soliloquy-arrows-active  soliloquy-theme-base no-js" style="max-width:725px;margin:0 auto 20px;"><ul id="soliloquy-209" class="soliloquy-slider soliloquy-slides soliloquy-wrap soliloquy-clear"><li aria-hidden="true" class="soliloquy-item soliloquy-item-1 soliloquy-id-212 soliloquy-image-slide" draggable="false" style="list-style:none;"><picture decoding="async" loading="lazy" id="soliloquy-image-212" class="soliloquy-image soliloquy-image-1" data-soliloquy-src-mobile="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-600x200_c.jpg" data-no-lazy="1">
+<source type="image/webp" srcset="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725.jpg.webp"/>
+<img width="725" height="300" decoding="async" loading="lazy" src="wp-content/uploads/2015/07/Mobile-Home-Kitchen-725.jpg" alt="Mobile-Home-Kitchen-725" data-soliloquy-src-mobile="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-600x200_c.jpg" data-no-lazy="1"/>
+</picture>
+</li><li aria-hidden="true" class="soliloquy-item soliloquy-item-2 soliloquy-id-211 soliloquy-image-slide" draggable="false" style="list-style:none;"><img width="1" height="1" decoding="async" loading="lazy" id="soliloquy-image-211" class="soliloquy-image soliloquy-image-2 soliloquy-preload" src="wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-2.jpg" alt="Mobile-Home-Kitchen-725-2" data-soliloquy-src-mobile="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-2-600x200_c.jpg" data-no-lazy="1"  /></li><li aria-hidden="true" class="soliloquy-item soliloquy-item-3 soliloquy-id-213 soliloquy-image-slide" draggable="false" style="list-style:none;"><img width="1" height="1" decoding="async" loading="lazy" id="soliloquy-image-213" class="soliloquy-image soliloquy-image-3 soliloquy-preload" src="wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Exterior-Justice-725.jpg" alt="Mobile-Home-Exterior-Justice-725" data-soliloquy-src-mobile="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Exterior-Justice-725-600x200_c.jpg" data-no-lazy="1"  /></li><li aria-hidden="true" class="soliloquy-item soliloquy-item-4 soliloquy-id-210 soliloquy-image-slide" draggable="false" style="list-style:none;"><img width="1" height="1" decoding="async" loading="lazy" id="soliloquy-image-210" class="soliloquy-image soliloquy-image-4 soliloquy-preload" src="wp-content/plugins/soliloquy/assets/css/images/holder.gif" data-soliloquy-src="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/2-bedroom-710sqft.jpg" alt="2-bedroom-710sqft" data-soliloquy-src-mobile="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/2-bedroom-710sqft-600x200_c.jpg" data-no-lazy="1"  /></li></ul></div><noscript><div class="soliloquy-no-js" style="display:none;visibility:hidden;height:0;line-height:0;opacity:0;"><picture decoding="async" data-no-lazy="1" class="soliloquy-image soliloquy-no-js-image skip-lazy" loading="lazy">
+<source type="image/webp" srcset="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725.jpg.webp"/>
+<img decoding="async" data-no-lazy="1" loading="lazy" src="wp-content/uploads/2015/07/Mobile-Home-Kitchen-725.jpg" alt="Mobile-Home-Kitchen-725"/>
+</picture>
+<picture decoding="async" data-no-lazy="1" class="soliloquy-image soliloquy-no-js-image skip-lazy" loading="lazy">
+<source type="image/webp" srcset="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-2.jpg.webp"/>
+<img decoding="async" data-no-lazy="1" loading="lazy" src="wp-content/uploads/2015/07/Mobile-Home-Kitchen-725-2.jpg" alt="Mobile-Home-Kitchen-725-2"/>
+</picture>
+<picture decoding="async" data-no-lazy="1" class="soliloquy-image soliloquy-no-js-image skip-lazy" loading="lazy">
+<source type="image/webp" srcset="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/Mobile-Home-Exterior-Justice-725.jpg.webp"/>
+<img decoding="async" data-no-lazy="1" loading="lazy" src="wp-content/uploads/2015/07/Mobile-Home-Exterior-Justice-725.jpg" alt="Mobile-Home-Exterior-Justice-725"/>
+</picture>
+<picture decoding="async" data-no-lazy="1" class="soliloquy-image soliloquy-no-js-image skip-lazy" loading="lazy">
+<source type="image/webp" srcset="https://www.chiefmobilehomepark.com/wp-content/uploads/2015/07/2-bedroom-710sqft.jpg.webp"/>
+<img decoding="async" data-no-lazy="1" loading="lazy" src="wp-content/uploads/2015/07/2-bedroom-710sqft.jpg" alt="2-bedroom-710sqft"/>
+</picture>
+</div></noscript></div><br />
+Rent a two bedroom, one bath manufactured home at Chief Mobile Home Park in Justice, IL. This home features  appliances (refrigerator and stove) and available space for washer and dryer.</p>
+<div class="one-half first">
+<h3>DETAILS</h3>
+<ul>
+<li><strong>Square Feet: 728</strong></li>
+<li><strong>Home Size: 14&#215;52</strong></li>
+<li><strong>Monthly Rent: $1,400</strong><br />
+(Rent includes land fee, water, sewer and trash.)</li>
+<li><strong>If you sign a 14 month lease or longer, receive one month rent FREE.</strong></li>
+</ul>
+<h3>LIVING AREAS</h3>
+<ul>
+<li>Carpet</li>
+<li>Valance with Mini-Blinds</li>
+</ul>
+<h3>KITCHEN</h3>
+<ul>
+<li>Flat Panel MDF picture frame cabinet doors</li>
+<li>Stainless Steel Sink</li>
+<li>18 Cu. Ft. Double Door Frost Free Refrigerator</li>
+<li>30&#8243; Deluxe Gas Range with Range Hood</li>
+<li>Dinette Light</li>
+<li>Shelf above Refrigerator</li>
+<li>Valance with Mini-Blinds</li>
+</ul>
+<h3>Bathrooms</h3>
+<ul>
+<li>Linoleum</li>
+<li>Flat Panel MDF picture frame cabinet doors</li>
+<li>Dual Handle Lav Faucet</li>
+<li>Decorative Mirror</li>
+<li>Privacy Locks</li>
+<li>Power Vent Fan and Light Combo</li>
+<li>Round China Commode</li>
+</ul>
+</div>
+<div class="one-half">
+<h3>Bedrooms</h3>
+<ul>
+<li>Carpet</li>
+<li>Mini-Blinds</li>
+<li>Ventilated Wire Shelving</li>
+</ul>
+<h3>Additional Features</h3>
+<ul>
+<li>8&#8242; Side Wall</li>
+<li>25- Year roof Shingles</li>
+<li>Vinyl Lap siding</li>
+<li>Foam Core Exterior Sheathing</li>
+<li>Shutters at Front Door with Storm</li>
+<li>Out-swing Rear Door</li>
+<li>Deadbolts Front and Rear Door</li>
+<li>Flat Ceiling throughout</li>
+<li>Textured Ceiling</li>
+<li>Accent wall in Living Room &amp; Master Bedroom</li>
+<li>PEX Water Lines</li>
+<li>Plumb for Washer</li>
+<li>Wire for Dryer</li>
+<li>Gas Furnace</li>
+<li>Fiberglass Ducts with floor registers</li>
+<li>40 Gal. Electric Water Heater</li>
+<li>Water Shut off Valves at main</li>
+<li>2 x 6 Floor Joists</li>
+<li>Metal Single Hung Windows with self storing storms</li>
+<li>200 amp Service entrance</li>
+<li>Smoke Detector with Battery Backup &amp; False Alarm Control</li>
+</ul>
+</div>
+</div></div></div><div id="sidebar" class="sidebar widget-area"><div class="widget-area"><div id="block-19" class="widget widget_block widget_text"><div class="widget-wrap">
+<p>Chief Mobile Home Park is a manufactured home community located in Justice, Illinois. Since 1950, the same family has owned and operated Chief and management and staff specialize in the rental and sale of new and pre-owned mobile homes. The mission is to provide exceptional service and a safe, close knit community for the residents.</p>
+</div></div><div id="block-20" class="widget widget_block widget_text"><div class="widget-wrap">
+<p><strong>Community Features:</strong><br><br>Professional on-site staff<br>Off street private parking<br>City water and city sewer<br>Public transportation nearby<br>Close to to major expressways<br>Pet friendly<br>Close to Midway airport<br>Across the street from Wilkins Elementary School<br>Close to local stores, banks, post office, and parks</p>
+</div></div><div id="block-18" class="widget widget_block widget_text"><div class="widget-wrap">
+<p><strong>Office Hours:</strong><br><br>Monday 8:30 a.m. - 4 p.m.<br>Tuesday 8:30 a.m. - 4 p.m.<br>Wednesday 8:30 a.m. - 4 p.m.<br>Thursday 8:30 a.m. - 4 p.m.<br>Friday 8:30 a.m. - 4 p.m.</p>
+</div></div></div></div></div></div></div><div id="footer" class="footer"><div class="wrap"><div class="footer-left"><div class="widget-area"><div id="nav_menu-2" class="widget widget_nav_menu"><div class="widget-wrap"><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-79"><a href="index.html">Home</a></li>
+<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="index.html?p=8">About Us</a></li>
+<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="index.html?p=32">Mobile Homes for Sale</a></li>
+<li id="menu-item-588" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-588"><a href="index.html?p=34">Mobile Homes for Rent</a></li>
+</ul></div></div></div><div id="nav_menu-3" class="widget widget_nav_menu"><div class="widget-wrap"><div class="menu-footer-2-container"><ul id="menu-footer-2" class="menu"><li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="index.html?p=36">Testimonials</a></li>
+<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="index.html?p=41">News &#038; Events</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="index.html?p=52">Photos</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="index.html?p=43">Contact Us</a></li>
+</ul></div></div></div></div></div><div class="footer-right"><p>Chief Mobile Home Park<br />A mobile home community in Justice, Illinois</p><p></p><p>708-458-2033</p><p>8101 W 79th Street</p><p>Justice, IL 60458</p><br/><p>Copyright &#x000A9;&nbsp;2024<br /></p></div></div></div></div>	<div class="mysticky-welcomebar-fixed mysticky-site-front mysticky-welcomebar-position-top mysticky-welcomebar-showx-desktop mysticky-welcomebar-showx-mobile mysticky-welcomebar-btn-desktop mysticky-welcomebar-btn-mobile mysticky-welcomebar-display-desktop mysticky-welcomebar-display-mobile mysticky-welcomebar-attention-heartbeat mysticky-welcomebar-entry-effect-slide-in"  data-after-triger="after_a_few_seconds" data-triger-sec="0" data-position="top" data-height="60" data-rediect="redirect_to_url" data-aftersubmission="dont_show_welcomebar" data-show-success-message="">
+		<div class="mysticky-welcomebar-fixed-wrap">
+			<div class="mysticky-welcomebar-content">			
+				<p>Are you retiring or considering downsizing in the hot sellers’ market? Cash in on your property and order a new custom manufactured home.<br />
+Live at Chief Mobile Home Park for a fraction of the price in a new home.</p>
+			</div>
+
+			
+			<div class="mysticky-welcomebar-btn " >
+				
+				<a href="index.html?p=43" >Contact Us				</a>
+			</div>
+		
+						<span class="mysticky-welcomebar-close" style="color:#000000">X</span>		
+		</div>
+	</div>	
+
+	<style>
+/*-------------New-----*/
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+	.mysticky-welcomebar-fixed , .mysticky-welcomebar-fixed * {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.mysticky-welcomebar-fixed {
+		background-color: #eeee22;
+		font-family: Poppins;
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 9999999;
+		opacity: 0;
+	}
+
+	.mysticky-welcomebar-fixed-wrap {
+		min-height: 60px;
+		padding: 20px 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+	.mysticky-welcomebar-animation {
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		transition: all 1s ease 0s;
+	}
+	.mysticky-welcomebar-position-top {
+		top:0;
+	}
+	.mysticky-welcomebar-position-bottom {
+		bottom:0;
+	}
+	.mysticky-welcomebar-position-top.mysticky-welcomebar-entry-effect-slide-in {
+		top: -60px;
+	}
+	.mysticky-welcomebar-position-bottom.mysticky-welcomebar-entry-effect-slide-in {
+		bottom: -60px;
+	}
+	.mysticky-welcomebar-entry-effect-fade {
+		opacity: 0;
+	}
+	.mysticky-welcomebar-entry-effect-none {
+		display: none;
+	}
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-content p a{
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.25ch;
+	}
+	
+	
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-content p a,
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-content p {
+		color: #000000;
+		font-size: 16px;
+		margin: 0;
+		padding: 0;
+		line-height: 1.2;
+		font-weight: 400;
+		font-family:Poppins	}
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-btn {
+		/*padding-left: 30px;*/
+		display: none;
+		line-height: 1;
+		margin-left: 10px;
+	}
+	.mysticky-welcomebar-fixed.mysticky-welcomebar-btn-desktop .mysticky-welcomebar-btn {
+		display: block;
+	}
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-btn a {
+		background-color: #000000;
+		font-family: inherit;
+		color: #ffffff;
+		border-radius: 4px;
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: top;
+		line-height: 1.2;
+		font-size: 16px;
+		font-weight: 400;
+		padding: 5px 20px;
+		white-space: nowrap;
+	}
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-btn a:hover {
+		/*opacity: 0.7;*/
+		-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+		-webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+		box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	}
+
+
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-close {
+		display: none;
+		vertical-align: top;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 5px;
+		color: #000;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		outline: none;		
+		text-decoration: none;
+		text-shadow: 0 0 0px #fff;
+		-webkit-transition: all 0.5s ease 0s;
+		-moz-transition: all 0.5s ease 0s;
+		transition: all 0.5s ease 0s;
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+
+
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-close:hover {
+		opacity: 1;
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	.mysticky-welcomebar-fixed .mysticky-welcomebar-close span.dashicons {
+		font-size: 27px;
+	}
+	.mysticky-welcomebar-fixed.mysticky-welcomebar-showx-desktop .mysticky-welcomebar-close {
+		display: inline-block;
+		cursor: pointer;
+	}	
+	
+	/* Animated Buttons */
+		.mysticky-welcomebar-btn a {
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+		}
+		@-webkit-keyframes flash {
+			from,
+			50%,
+			to {
+				opacity: 1;
+			}
+
+			25%,
+			75% {
+				opacity: 0;
+			}
+		}
+		@keyframes flash {
+			from,
+			50%,
+			to {
+				opacity: 1;
+			}
+
+			25%,
+			75% {
+				opacity: 0;
+			}
+		}
+		.mysticky-welcomebar-attention-flash.animation-start .mysticky-welcomebar-btn a {
+			-webkit-animation-name: flash;
+			animation-name: flash;
+		}
+		
+		@keyframes shake {
+			from,
+			to {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+
+			10%,
+			30%,
+			50%,
+			70%,
+			90% {
+				-webkit-transform: translate3d(-10px, 0, 0);
+				transform: translate3d(-10px, 0, 0);
+			}
+
+			20%,
+			40%,
+			60%,
+			80% {
+				-webkit-transform: translate3d(10px, 0, 0);
+				transform: translate3d(10px, 0, 0);
+			}
+		}
+
+		.mysticky-welcomebar-attention-shake.animation-start .mysticky-welcomebar-btn a {
+			-webkit-animation-name: shake;
+			animation-name: shake;
+		}
+		
+		@-webkit-keyframes swing {
+			20% {
+				-webkit-transform: rotate3d(0, 0, 1, 15deg);
+				transform: rotate3d(0, 0, 1, 15deg);
+			}
+
+			40% {
+				-webkit-transform: rotate3d(0, 0, 1, -10deg);
+				transform: rotate3d(0, 0, 1, -10deg);
+			}
+
+			60% {
+				-webkit-transform: rotate3d(0, 0, 1, 5deg);
+				transform: rotate3d(0, 0, 1, 5deg);
+			}
+
+			80% {
+				-webkit-transform: rotate3d(0, 0, 1, -5deg);
+				transform: rotate3d(0, 0, 1, -5deg);
+			}
+	
+			to {
+				-webkit-transform: rotate3d(0, 0, 1, 0deg);
+				transform: rotate3d(0, 0, 1, 0deg);
+			}
+		}
+
+		@keyframes swing {
+			20% {
+				-webkit-transform: rotate3d(0, 0, 1, 15deg);
+				transform: rotate3d(0, 0, 1, 15deg);
+			}
+
+			40% {
+				-webkit-transform: rotate3d(0, 0, 1, -10deg);
+				transform: rotate3d(0, 0, 1, -10deg);
+			}
+
+			60% {
+				-webkit-transform: rotate3d(0, 0, 1, 5deg);
+				transform: rotate3d(0, 0, 1, 5deg);
+			}
+
+			80% {
+				-webkit-transform: rotate3d(0, 0, 1, -5deg);
+				transform: rotate3d(0, 0, 1, -5deg);
+			}
+
+			to {
+				-webkit-transform: rotate3d(0, 0, 1, 0deg);
+				transform: rotate3d(0, 0, 1, 0deg);
+			}
+		}
+
+		.mysticky-welcomebar-attention-swing.animation-start .mysticky-welcomebar-btn a {
+			-webkit-transform-origin: top center;
+			transform-origin: top center;
+			-webkit-animation-name: swing;
+			animation-name: swing;
+		}
+		
+		@-webkit-keyframes tada {
+			from {
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+			}
+
+			10%,
+			20% {
+				-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+				transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+			}
+
+			30%,
+			50%,
+			70%,
+			90% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+			}
+
+			40%,
+			60%,
+			80% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+			}
+
+			to {
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+			}
+		}
+
+		@keyframes tada {
+			from {
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+			}
+
+			10%,
+			20% {
+				-webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+				transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+			}
+
+			30%,
+			50%,
+			70%,
+			90% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+			}
+
+			40%,
+			60%,
+			80% {
+				-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+				transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+			}
+
+			to {
+				-webkit-transform: scale3d(1, 1, 1);
+				transform: scale3d(1, 1, 1);
+			}
+		}
+
+		.mysticky-welcomebar-attention-tada.animation-start .mysticky-welcomebar-btn a {
+			-webkit-animation-name: tada;
+			animation-name: tada;
+		}
+		
+		@-webkit-keyframes heartBeat {
+			0% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+
+			14% {
+				-webkit-transform: scale(1.3);
+				transform: scale(1.3);
+			}
+
+			28% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+
+			42% {
+				-webkit-transform: scale(1.3);
+				transform: scale(1.3);
+			}
+
+			70% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
+		@keyframes heartBeat {
+			0% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+
+			14% {
+				-webkit-transform: scale(1.3);
+				transform: scale(1.3);
+			}
+
+			28% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+
+			42% {
+				-webkit-transform: scale(1.3);
+				transform: scale(1.3);
+			}
+
+			70% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
+		.mysticky-welcomebar-attention-heartbeat.animation-start .mysticky-welcomebar-btn a {
+		  -webkit-animation-name: heartBeat;
+		  animation-name: heartBeat;
+		  -webkit-animation-duration: 1.3s;
+		  animation-duration: 1.3s;
+		  -webkit-animation-timing-function: ease-in-out;
+		  animation-timing-function: ease-in-out;
+		}
+		
+		@-webkit-keyframes wobble {
+			from {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+
+			15% {
+				-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+				transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+			}
+
+			30% {
+				-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+				transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+			}
+
+			45% {
+				-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+				transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+			}
+
+			60% {
+				-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+				transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+			}
+
+			75% {
+				-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+				transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+			}
+
+			to {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+		}
+
+		@keyframes wobble {
+			from {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+
+			15% {
+				-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+				transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+			}
+
+			30% {
+				-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+				transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+			}
+
+			45% {
+				-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+				transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+			}
+
+			60% {
+				-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+				transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+			}
+
+			75% {
+				-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+				transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+			}
+
+			to {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+		}
+		
+		.mysticky-welcomebar-attention-wobble.animation-start .mysticky-welcomebar-btn a {
+			-webkit-animation-name: wobble;
+			animation-name: wobble;
+		}
+		@media only screen and (min-width: 768px) {
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-entry-effect-fade.entry-effect {
+				opacity: 1;
+			}
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-entry-effect-none.entry-effect {
+				display: block;
+			}
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-position-top.mysticky-welcomebar-fixed ,
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-position-top.mysticky-welcomebar-entry-effect-slide-in.entry-effect.mysticky-welcomebar-fixed {
+				top: 0;			
+			}
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-position-bottom.mysticky-welcomebar-fixed ,
+			.mysticky-welcomebar-display-desktop.mysticky-welcomebar-position-bottom.mysticky-welcomebar-entry-effect-slide-in.entry-effect.mysticky-welcomebar-fixed {
+				bottom: 0;
+			}	
+		}
+		@media only screen and (max-width: 767px) {
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-entry-effect-fade.entry-effect {
+				opacity: 1;
+			}
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-entry-effect-none.entry-effect {
+				display: block;
+			}
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-position-top.mysticky-welcomebar-fixed ,
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-position-top.mysticky-welcomebar-entry-effect-slide-in.entry-effect.mysticky-welcomebar-fixed {
+				top: 0;
+			}
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-position-bottom.mysticky-welcomebar-fixed ,
+			.mysticky-welcomebar-display-mobile.mysticky-welcomebar-position-bottom.mysticky-welcomebar-entry-effect-slide-in.entry-effect.mysticky-welcomebar-fixed {
+				bottom: 0;
+			}
+			/*.mysticky-welcomebar-fixed.mysticky-welcomebar-showx-desktop .mysticky-welcomebar-close {
+				display: none;
+			}
+			.mysticky-welcomebar-fixed.mysticky-welcomebar-showx-mobile .mysticky-welcomebar-close {
+				display: inline-block;
+			}*/
+			.mysticky-welcomebar-fixed.mysticky-welcomebar-btn-desktop .mysticky-welcomebar-btn {
+				display: none;
+			}
+			.mysticky-welcomebar-fixed.mysticky-welcomebar-btn-mobile .mysticky-welcomebar-btn {
+				display: block;
+				margin-top: 10px;
+			}
+		}
+		@media only screen and (max-width: 480px) {
+
+			.mysticky-welcomebar-fixed-wrap {padding: 15px 35px 10px 10px; flex-wrap:wrap;}
+			/*.welcombar-contact-lead .mysticky-welcomebar-fixed-wrap {flex-wrap: wrap; justify-content: center;}*/
+			
+			.mysticky-welcomebar-fixed .mystickymenu-front.mysticky-welcomebar-lead-content {margin: 10px 0 10px 20px !important;}
+
+			.mysticky-welcomebar-fixed .mysticky-welcomebar-btn {
+				padding-left: 10px;
+			}
+		}
+
+
+		body.mysticky-welcomebar-apper #wpadminbar{
+			z-index:99999999;
+		}
+
+		.mysticky-welcomebar-fixed .mystickymenu-front.mysticky-welcomebar-lead-content {
+			display: flex;
+			width: auto;
+			margin: 0 0px 0 10px;
+		}
+
+		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"] {
+			font-size: 12px;
+			padding: 7px 5px;
+			margin-right: 10px;
+			min-width: 50%;
+			border: 0;
+			width:auto;
+		}
+
+		.mystickymenu-front.mysticky-welcomebar-lead-content input[type="text"]:focus {
+			outline: unset;
+			box-shadow: unset;
+		}
+
+		.input-error {
+			color: #ff0000;
+			font-style: normal;
+			font-family: inherit;
+			font-size: 13px;
+			display: block;
+			position: absolute;
+			bottom: 0px;
+		}
+
+		.mysticky-welcomebar-fixed.mysticky-site-front .mysticky-welcomebar-btn.contact-lead-button {
+		  margin-left: 0;
+		}
+		.morphext > .morphext__animated {
+		  display: inline-block;
+		}
+	</style>
+	<script type="rocketlazyloadscript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65717201-1', 'auto');
+  ga('send', 'pageview');
+
+</script><link data-minify="1" rel='stylesheet' id='soliloquy-style-css-css' href='wp-content/cache/min/1/wp-content/plugins/soliloquy/assets/css/soliloquy.css?ver=1696529146' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/themes/hans/lib/js/css_browser_selector.js?ver=1696529146" id="browserselect-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/plugins/mystickymenu/js/morphext/morphext.min.js?ver=2.6.7" id="morphext-js-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="welcomebar-frontjs-js-extra">
+/* <![CDATA[ */
+var welcomebar_frontjs = {"ajaxurl":"https:\/\/www.chiefmobilehomepark.com\/wp-admin\/admin-ajax.php","days":"Days","hours":"Hours","minutes":"Minutes","seconds":"Seconds","ajax_nonce":"15e7bbcd59"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/plugins/mystickymenu/js/welcomebar-front.js?ver=1696529146" id="welcomebar-frontjs-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/cache/min/1/wp-content/plugins/mystickymenu/js/detectmobilebrowser.js?ver=1696529146" id="detectmobilebrowser-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="mystickymenu-js-extra">
+/* <![CDATA[ */
+var option = {"mystickyClass":".navbar","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"fade","mysticky_disable_down":"false"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/plugins/mystickymenu/js/mystickymenu.min.js?ver=2.6.7" id="mystickymenu-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-includes/js/comment-reply.min.js?ver=6.4.2" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" id="soliloquy-script-js-extra">
+/* <![CDATA[ */
+var soliloquy_ajax = {"ajax":"https:\/\/www.chiefmobilehomepark.com\/wp-admin\/admin-ajax.php","ajax_nonce":"5e615d5476"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.chiefmobilehomepark.com/wp-content/plugins/soliloquy/assets/js/min/soliloquy-min.js?ver=2.6.6" id="soliloquy-script-js" defer></script>
+		<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+				jQuery('.soliloquy-container').removeClass('no-js');
+		</script>
+						<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+					if ( typeof soliloquy_slider === 'undefined' || false === soliloquy_slider ) {soliloquy_slider = {};}var soliloquy_width_209 = jQuery('#soliloquy-container-209').width() < 725 ? 725 : jQuery('#soliloquy-container-209').width();jQuery('#soliloquy-container-209').css('height', Math.round(soliloquy_width_209/(725/300))).fadeTo(300, 1);jQuery(document).ready(function($){var soliloquy_container_209 = $('#soliloquy-container-209'),soliloquy_209 = $('#soliloquy-209'),soliloquy_holder_209 = $('#soliloquy-209').find('.soliloquy-preload');if ( 0 !== soliloquy_holder_209.length ) {var soliloquy_mobile = soliloquyIsMobile(),soliloquy_src_attr = soliloquy_mobile ? 'data-soliloquy-src-mobile' : 'data-soliloquy-src';soliloquy_holder_209.each(function() {var soliloquy_src = $(this).attr(soliloquy_src_attr);if ( typeof soliloquy_src === 'undefined' || false === soliloquy_src ) {return;}var soliloquy_image = new Image();soliloquy_image.src = soliloquy_src;$(this).attr('src', soliloquy_src).removeAttr(soliloquy_src_attr);});}soliloquy_slider['209'] = soliloquy_209.soliloquy({slideSelector: '.soliloquy-item',speed: 400,pause: 7000,auto: 1,keyboard: 1,useCSS: 1,startSlide: 0,autoHover: 0,autoDelay: 0,adaptiveHeight: 1,adaptiveHeightSpeed: 400,infiniteLoop: 1,mode: 'fade',pager: 1,controls: 1,autoControls: 0,autoControlsCombine: 0,nextText: '',prevText: '',startText: '',stopText: '',onSliderLoad: function(currentIndex){soliloquy_container_209.find('.soliloquy-active-slide').removeClass('soliloquy-active-slide').attr('aria-hidden','true');soliloquy_container_209.css({'height':'auto','background-image':'none'});if ( soliloquy_container_209.find('.soliloquy-slider li').length > 1 ) {soliloquy_container_209.find('.soliloquy-controls').fadeTo(300, 1);} else {soliloquy_container_209.find('.soliloquy-controls').addClass('soliloquy-hide');}soliloquy_209.find('.soliloquy-item:not(.soliloquy-clone):eq(' + currentIndex + ')').addClass('soliloquy-active-slide').attr('aria-hidden','false');$('.soliloquy-clone .soliloquy-video-holder').remove();soliloquy_container_209.find('.soliloquy-controls-direction').attr('aria-label','carousel buttons').attr('aria-controls', 'soliloquy-container-209');soliloquy_container_209.find('.soliloquy-controls-direction a.soliloquy-prev').attr('aria-label','previous');soliloquy_container_209.find('.soliloquy-controls-direction a.soliloquy-next').attr('aria-label','next');$(window).trigger('resize');soliloquy_container_209.parent().attr('data-soliloquy-loaded', 1);},onSlideBefore: function(element, oldIndex, newIndex, oldelm ){soliloquy_container_209.find('.soliloquy-active-slide').removeClass('soliloquy-active-slide').attr('aria-hidden','true');$(element).addClass('soliloquy-active-slide').attr('aria-hidden','false');},onSlideAfter: function(element, oldIndex, newIndex){}});});				</script>
+				<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script></body></html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
