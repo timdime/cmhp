@@ -1,0 +1,19 @@
+homesForSale:
+  - address: "123 Oak St, Justice, IL"
+    image: "https://via.placeholder.com/300"
+    price: "$100,000"
+    description: "Spacious 3-bedroom home with modern amenities."
+  - address: "456 Maple St, Justice, IL"
+    image: "https://via.placeholder.com/300"
+    price: "$75,000"
+    description: "Comfortable 2-bedroom home with a lovely garden."
+
+homesForRent:
+  - address: "789 Pine St, Justice, IL"
+    image: "https://via.placeholder.com/300"
+    price: "$1,200/month"
+    description: "Large 4-bedroom home with a fenced backyard."
+  - address: "101 Elm St, Justice, IL"
+    image: "https://via.placeholder.com/300"
+    price: "$900/month"
+    description: "Comfortable 2-bedroom home with a community pool."
